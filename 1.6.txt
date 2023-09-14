@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int h, m, result;
+    scanf("%d %d", &h, &m);
+    result = abs((h % 12 * 5 + 15) - m);
+    result = ((m + result) / 60 * 5) + result;
+    printf("%d", result);
+    return 0;
+}
