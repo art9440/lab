@@ -6,7 +6,7 @@ int main() {
     scanf("%f", &t);
     t = t - (int)t / 10 * 10;
     
-    if ((t >= 0 && t < 2) || (t >= 5 && t < 7))
+    if ((int)t % 5 >= 0 && (int)t % 5 <= 3)
         printf("Green");
     else
         printf("Red");
