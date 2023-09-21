@@ -34,5 +34,6 @@ int main() {
     }
     printf("%d", nodall(arr, n));
 
+    free(arr);
     return 0;
 }
