@@ -24,5 +24,6 @@ int main(){
     printf("%d", res);
 
 
+    free(arr);
     return 0;
 }
