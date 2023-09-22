@@ -15,4 +15,6 @@ int main(){
     scanf("%d", &n);
     res = sumnum(n, sum);
     printf("%d", res);
+
+    return 0;
 }
