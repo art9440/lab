@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <malloc.h>
+
+
+void delarr(int *len, int* arr){
+    for(int i = 0; i < *len - 1; i++){
+        for(int j = i + 1; j < *len; j++){
+            
+            if (arr[i] == arr[j]){
+                arr[j] = arr[*len -1];
+                *len = *len - 1;
+                j--;
+                arr=(int*)realloc(arr, *len * sizeof(int));
+            }
+        }
+    }
+}
+
+
+int main(){
+    int len, *arr, res;
+    scanf("%d", &len);
+    arr = (int*)malloc(len * sizeof(int));
+
+    for (int k = 0; k < len; k++)
+        scanf("%d", arr + k);
+
+    delarr(&len, arr);
+
+    for (int i = 0; i < len; i++)
+        printf("%d ", arr[i]);
+
+
+    free(arr);
+    return 0;
+}
