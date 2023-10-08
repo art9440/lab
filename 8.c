@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <malloc.h>
 
 
 void sort(char **words, int countword){
@@ -23,7 +24,7 @@ void sort(char **words, int countword){
 int main(){
     char str[1000];
     gets(str);
-    char* words[100];
+    char** words = (char *)malloc(sizeof(char));
     char* word = strtok(str, " ");
     int countword = 0;
     while(word != NULL) {
@@ -31,7 +32,7 @@ int main(){
         countword++;
         word = strtok(NULL, " ");
     }
-    
+
     sort(words, countword);
 
 
