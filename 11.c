@@ -29,7 +29,7 @@ int main(){
         countword++;
         word = strtok(NULL, " ");
     }
-    int step = 1;
+
     game(words,countword);
 
 
